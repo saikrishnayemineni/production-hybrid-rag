@@ -1,0 +1,20 @@
+[
+  {
+    "query": "What are the door-to-balloon PCI time requirements and ECG protocol for STEMI?",
+    "query_type": "Healthcare Semantic",
+    "expected_doc_ids": ["DOC-HLTH-001"],
+    "key_grounded_facts": ["12-lead ECG within 10 minutes", "door-to-balloon PCI within 90 minutes"]
+  },
+  {
+    "query": "What is the qSOFA scoring criteria and Hour-1 bundle for Sepsis?",
+    "query_type": "Acronym & Critical Care",
+    "expected_doc_ids": ["DOC-HLTH-002"],
+    "key_grounded_facts": ["RR >= 22", "altered mentation", "SBP <= 100 mmHg", "serum lactate", "blood cultures prior to antibiotics"]
+  },
+  {
+    "query": "How does Reciprocal Rank Fusion (RRF) combine dense and BM25 sparse search?",
+    "query_type": "AI Architecture & Math",
+    "expected_doc_ids": ["DOC-AI-004"],
+    "key_grounded_facts": ["RRF constant k=60", "dense bi-encoder embeddings", "sparse Okapi BM25"]
+  }
+]

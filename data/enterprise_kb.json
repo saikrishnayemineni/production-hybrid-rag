@@ -1,0 +1,37 @@
+[
+  {
+    "doc_id": "DOC-HLTH-001",
+    "title": "Clinical Practice Guidelines for Acute Coronary Syndromes (ACS / STEMI)",
+    "category": "Healthcare & Cardiology",
+    "content": "Acute Coronary Syndrome (ACS) encompasses ST-Elevation Myocardial Infarction (STEMI), non-ST-elevation myocardial infarction (NSTEMI), and unstable angina. Immediate initial management requires a 12-lead ECG obtained within 10 minutes of emergency department presentation, continuous cardiac telemetry, and serial high-sensitivity cardiac troponin testing. If STEMI is confirmed, door-to-balloon percutaneous coronary intervention (PCI) must be achieved within 90 minutes. Pharmacological therapy includes chewable aspirin (324 mg), P2Y12 platelet inhibitors (clopidogrel, ticagrelor), and unfractionated heparin. Note that nitroglycerin is strictly contraindicated in patients who have used phosphodiesterase-5 (PDE-5) inhibitors such as Sildenafil or Tadalafil within 24 to 48 hours due to the risk of severe refractory hypotension.",
+    "tags": ["ACS", "STEMI", "Cardiology", "ECG", "Troponin", "Sildenafil", "Contraindications"]
+  },
+  {
+    "doc_id": "DOC-HLTH-002",
+    "title": "Surviving Sepsis Campaign: 2024 International Guidelines",
+    "category": "Critical Care & Sepsis",
+    "content": "Sepsis is defined as life-threatening organ dysfunction caused by a dysregulated host response to infection. The quick Sequential Organ Failure Assessment (qSOFA) score provides bedside identification of high-risk patients using three criteria: respiratory rate >= 22 breaths/min, altered mentation (GCS < 15), and systolic blood pressure <= 100 mmHg. The Hour-1 Sepsis Bundle mandates: 1) Measure serum lactate level; 2) Obtain blood cultures prior to antibiotic administration; 3) Administer empiric broad-spectrum IV antimicrobials within 60 minutes; 4) Initiate rapid administration of 30 mL/kg crystalloid for hypotension (MAP < 65 mmHg) or lactate >= 4 mmol/L; 5) Apply vasopressors (norepinephrine first-line) if patient remains hypotensive during or after fluid resuscitation.",
+    "tags": ["Sepsis", "qSOFA", "Critical Care", "Lactate", "Antibiotics", "Hypotension"]
+  },
+  {
+    "doc_id": "DOC-TECH-003",
+    "title": "HL7 FHIR Release 5 Specification for Clinical Interoperability",
+    "category": "Health Informatics",
+    "content": "Fast Healthcare Interoperability Resources (HL7 FHIR R5) defines modular RESTful schemas known as Resources for exchanging healthcare data. Key resources include Patient, Observation (for vitals and laboratory results), Condition (for problem lists and diagnoses), Encounter, and MedicationRequest. FHIR resources are serialized in JSON or XML format and secured via SMART on FHIR OAuth 2.0 / OpenID Connect profiles. High-throughput ingestion pipelines utilize Kafka event brokers to buffer FHIR bundles prior to vector embedding indexing in PostgreSQL pgvector or Qdrant.",
+    "tags": ["HL7", "FHIR", "Interoperability", "REST", "JSON", "EHR", "SMART"]
+  },
+  {
+    "doc_id": "DOC-AI-004",
+    "title": "Enterprise RAG Architecture: Dense, Sparse BM25 & Cross-Encoder Reranking",
+    "category": "Generative AI & LLMOps",
+    "content": "In production enterprise RAG systems, single-channel dense vector retrieval frequently fails on specialized domain entities, acronyms, and part numbers. A hybrid architecture combines dense bi-encoder embeddings with sparse Okapi BM25 indexing using Reciprocal Rank Fusion (RRF) with constant k=60. Following RRF candidate aggregation, a transformer cross-encoder reranker scores the top-25 chunks based on deep query-document cross-attention. This dual-stage filtering eliminates 78% of hallucination-inducing irrelevant context and reduces prompt token usage by over 40%.",
+    "tags": ["RAG", "Hybrid Search", "BM25", "Reciprocal Rank Fusion", "RRF", "Reranker", "LLMOps"]
+  },
+  {
+    "doc_id": "DOC-AI-005",
+    "title": "Self-Corrective RAG (CRAG) and Query Decomposition Strategies",
+    "category": "Agentic AI & Information Retrieval",
+    "content": "Corrective RAG (CRAG) augments traditional retrieval with autonomous evaluator agents that score retrieved chunk confidence. When the maximum retrieval confidence drops below a threshold (e.g. 0.75), the query is transformed via Hypothetical Document Embeddings (HyDE) or decomposed into orthogonal sub-queries. Furthermore, contextual compression algorithms strip conversational filler words and non-essential tokens from retrieved passages, maximizing the information density presented to the LLM generation stage.",
+    "tags": ["CRAG", "HyDE", "Query Decomposition", "Contextual Compression", "Agentic AI"]
+  }
+]

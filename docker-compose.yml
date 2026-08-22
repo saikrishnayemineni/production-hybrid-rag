@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  hybrid-rag-engine:
+    build: .
+    container_name: production-hybrid-rag
+    ports:
+      - "8000:8000"  # FastAPI REST API & Swagger Docs
+      - "8501:8501"  # Streamlit RAG Telemetry Dashboard
+    environment:
+      - ENVIRONMENT=production
+    restart: unless-stopped
